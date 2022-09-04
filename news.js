@@ -11,7 +11,7 @@ const displayNews = newes => {
   newes.forEach(news => {
     const newsDiv = document.createElement('div')
     newsDiv.innerHTML = `
-        <button class="px-3 py-2 rounded bg-info fw-semibold" onclick="loadEategory () ">${news.category_name}</button>
+        <button class="px-3 py-2 rounded fw-semibold btn btn-outline-info" onclick="loadEategory () ">${news.category_name}</button>
     
     `
     newsContainer.appendChild(newsDiv)
@@ -39,7 +39,8 @@ const displayCategory = categoryes => {
     <img src="${ceatagory.thumbnail_url}" class="card-img-top img-fuiled" alt="...">
     <div class="card-body px-3">
         <h5 class="card-title">${ceatagory.title}</h5>
-        <p class="card-text">${ceatagory.author.details}</p>
+        <p id="details" class="card-text 
+       ">${ceatagory.details}</p>
             <div class="d-flex">
             <img class="w-25 rounded-4" src="${ceatagory.image_url}">
             <h5 class="m-5">${ceatagory.author.name}</h5><div>
