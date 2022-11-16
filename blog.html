@@ -1,0 +1,180 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+
+<body>
+    <section>
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        what's a difference var let and const in javascript ?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p> A variable declaration is simply
+                            telling the computer that a variable exists and what value it should start with. Similar to
+                            other programming languages JavaScript also allows for the declaration of variables.
+
+                            There are three keywords in JavaScript that can be used to declare variables: let, var, and
+                            const. Each keyword has different rules and implications for how the variables they create
+                            can
+                            be used.
+                        </p>
+                        <br>
+                        <code cla>let</code>
+                        <br>
+                        <strong>
+                            The let keyword declares a block-scoped local variable, optionally initializing it to a
+                            value.
+                            Block-scoped means that the variable is only available within the block it was declared in,
+                            which is usually denoted by curly braces {}.
+                        </strong>
+                        <br>
+                        <code cla>var</code>
+                        <br>
+                        <strong>
+                            The var keyword declares a function-scoped or global variable, optionally initializing it to
+                            a value.
+                            Function-scoped means that the variable is only available within the function it was
+                            declared in. Global variables are available throughout your entire code.
+                        </strong>
+                        <br>
+                        <code cla>const</code>
+                        <br>
+                        <strong>
+                            The const keyword declares a block-scoped, immutable constant variable, i.e. a variable that
+                            can’t be reassigned.
+                            Constants are also called “immutable variables”, but that’s a bit of a misnomer since they
+                            are actually variables – just ones that can’t be reassigned.
+                        </strong>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        What's difference regular and arrow function in javascript?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p>
+                            In regular function, arguments will give you list of parameter passed in function, In arrow
+                            function arguments is not defined. In regular function, you always have to return any value,
+                            but in Arrow function you can skip return keyword and write in single line.
+                        </p>
+                        <br>
+                        <code cla>Syntax</code>
+                        <br>
+                        <strong>
+                            The behavior of this inside of an arrow function differs considerably from the regular
+                            function's this behavior. The arrow function doesn't define its own execution context.
+
+                            No matter how or where being executed, this value inside of an arrow function always equals
+                            this value from the outer function. In other words, the arrow function resolves this
+                            lexically.
+
+                            In the following example, myMethod() is an outer function of callback() arrow function:
+                        </strong>
+                        <br>
+                        <code cla>Regular function</code>
+                        <br>
+                        <strong>
+                            Inside of a regular JavaScript function, this value (aka the execution context) is dynamic.
+
+                            The dynamic context means that the value of this depends on how the function is invoked. In
+                            JavaScript, there are 4 ways you can invoke a regular function.
+                        </strong>
+                        <br>
+
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        What is the difference between map filter find and forEach in JavaScript?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p>
+                            The main difference between forEach and filter is that forEach just loop over the array and
+                            executes the callback but filter executes the callback and check its return value. If the
+                            value is true element remains in the resulting array but if the return value is false the
+                            element will be removed for the resulting array.
+                        </p>
+                        <br>
+                        <code cla>.forEach:</code>
+                        <br>
+                        <strong>
+                            .forEach(), is used to execute the same code on every element in an array but does not
+                            change the array and it returns undefined.
+
+                            Example:
+                            In the example below we would use .forEach() to iterate over an array of food and log that
+                            we would want to eat each of them.
+
+                            <p>
+                                let food = ['mango','rice','pepper','pear'];
+                                food.forEach(function(foodItem){ console.log('I want to eat '+foodItem);
+                                });
+                            </p>
+                        </strong>
+                        <br>
+                        <code cla>.map():</code>
+                        <br>
+                        <strong>
+                            .map() executes the same code on every element in an array and returns a new array with the
+                            updated elements.
+
+                            Example:
+                            In the example below we would use .map to iterate over the elements of the cost array and
+                            divide each element by 10, then assign our new array containing the new cost to the variable
+                            newCost.
+                            <p>
+                                let cost = [100,400,300,700];
+                                let newCost = cost.map(function(costItem){ return costItem / 10;
+                                });
+                                console.log(newCost);
+                            </p>
+                        </strong>
+                        <br>
+                        <code cla>.filter():</code>
+                        <br>
+                        <strong>
+                            .filter() checks every element in an array to see if it meets a certain criteria and returns
+                            a new array with the elements that return truthy for the criteria.
+
+                            Example:
+                            In the example below we would use .filter to return values that are less than 200.
+                            <p>
+                                let cost = [100,400,50,40,700];
+                                let smallCost = cost.filter(function(costItem){ return costItem < 200 });
+                                    console.log(smallCost); </p>
+                        </strong>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
