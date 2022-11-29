@@ -86,7 +86,7 @@ const mainNewsPaper = news => {
 
               <div class="viewArea d-flex align-items-center d-none d-lg-flex d-lg-block">
               <div>
-              <img  src="https://www.freeiconspng.com/thumbs/eye-icon/eyeball-icon-png-eye-icon-1.png" class="imgCircle" alt="...">
+              <img mo src="https://www.freeiconspng.com/thumbs/eye-icon/eyeball-icon-png-eye-icon-1.png" class="imgCircle" alt="...">
               </div>
 
               <div>
